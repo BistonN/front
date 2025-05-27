@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('mapa-hopi.jpeg');
+    background-image: url('../../imagem/mapa-hopi.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;

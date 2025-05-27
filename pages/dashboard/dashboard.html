@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Hopi Hari</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="./dashboard.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="logo.png" alt="Logo Hopi Hari">
+                    <img src="../../imagem/logo.png" alt="Logo Hopi Hari">
                 </div>
                 <div class="user-menu">
                     <div class="user-info">
@@ -29,7 +29,7 @@
     </header>
     
   
-<img src="mapa-hopi.jpeg" usemap="#image-map" class="img-fluid" alt="Mapa Hopi Hari" style="width: 100%; height: auto;">
+<img src="../../imagem/mapa-hopi.jpeg" usemap="#image-map" class="img-fluid" alt="Mapa Hopi Hari" style="width: 100%; height: auto;">
 
 <map name="image-map">
     <area target="" alt="Mstieri" title="Mistieri" href="mistieri.html" 
@@ -48,43 +48,7 @@
     <p>&copy; 2025 - Minha Página com Imagem</p>
 </footer>
 </div>
-    
-    
 
-    <script>
-        // Verificar se há um usuário logado
-        document.addEventListener('DOMContentLoaded', function() {
-            const userData = JSON.parse(localStorage.getItem('user')) || {};
-            
-            if (userData.firstName) {
-                document.getElementById('user-name').textContent = `Olá, ${userData.firstName}!`;
-                document.getElementById('user-email').textContent = userData.email;
-            } else {
-                // Redirecionar para a página de login se não houver usuário
-                window.location.href = '/';
-            }
-            
-            // Botão de logout
-            document.getElementById('logout-btn').addEventListener('click', function() {
-                localStorage.removeItem('user');
-                window.location.href = '/';
-            });
-            
-            // Toggle do menu lateral (para mobile)
-            document.getElementById('menu-toggle').addEventListener('click', function() {
-                document.getElementById('sidebar').classList.toggle('active');
-            });
-            
-            // Fechar menu ao clicar em um item (para mobile)
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 992) {
-                        document.getElementById('sidebar').classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
+<script src="./script.js"></script>
 </body>
 </html>

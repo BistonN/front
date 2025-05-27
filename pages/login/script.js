@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     };
     
     try {
-        const response = await fetch('http://localhost:3000/usuarios/login', { // 1 
+        const response = await fetch('http://localhost:3000/usuarios/login', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,10 +18,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const data = await response.json();
         
         if (response.ok) {
-            localStorage.setItem('token', JSON.stringify(data.token)); // 2
+            localStorage.setItem('token', JSON.stringify(data.token)); 
+            localStorage.setItem('user', JSON.stringify(data.user)); 
             
             alert('Login realizado com sucesso!');
-            window.location.href = '../dashboard/dashboard.html';  // 3
+            window.location.href = '../dashboard/dashboard.html';  
         } else {
             alert(`Erro: ${data.message || 'Credenciais inválidas'}`);
         }
