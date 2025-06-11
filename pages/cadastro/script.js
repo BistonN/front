@@ -1,7 +1,6 @@
 document.getElementById('registerForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Verificação de senha
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
