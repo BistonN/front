@@ -6,27 +6,37 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Dashboard - Hopi Hari</title>
     <link rel="stylesheet" href="../../css/aribabiba.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="logo.png" alt="Logo Hopi Hari">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Hopi Hari">
+            </div>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="user-name" id="user-name">Bem-vindo(a)</div>
+                    <div class="user-email" id="user-email"></div>
                 </div>
-                <div class="user-menu">
-                    <div class="user-info">
-                        <div class="user-name" id="user-name">Bem-vindo(a)</div>
-                        <div class="user-email" id="user-email"></div>
+
+                <!-- Notificações Dropdown -->
+                <div class="notification-dropdown">
+                    <button class="notification-btn" onclick="toggleDropdown()">🔔</button>
+                    <div class="dropdown-content" id="notificationContent">
+                        <h3>Filas</h3>
                     </div>
-                    <form action="dashboard.html">
-                        <button class="logout-btn">Voltar</button>
-                    </form>
                 </div>
+
+                <form action="dashboard.html">
+                    <button class="logout-btn">Voltar</button>
+                </form>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <div class="container">
         <div class="rides-grid">
